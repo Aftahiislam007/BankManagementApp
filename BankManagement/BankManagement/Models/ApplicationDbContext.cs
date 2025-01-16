@@ -9,7 +9,6 @@ namespace BankManagement.Models
 
         }
 
-        // Example DbSet
         public DbSet<Users> Users { get; set; }
     }
 }
