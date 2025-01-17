@@ -1,4 +1,5 @@
 ﻿using BankManagement.Models;
+using BankManagement.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -39,7 +40,8 @@ namespace BankManagement.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Username)
+                new Claim(ClaimTypes.Name, user.Username),
+                new Claim(ClaimTypes.Role, user.Role.Name)
             };
 
             var token = new JwtSecurityToken(

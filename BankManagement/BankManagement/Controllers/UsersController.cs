@@ -1,4 +1,5 @@
 ﻿using BankManagement.Models;
+using BankManagement.Models.Dto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -35,10 +36,17 @@ namespace BankManagement.Controllers
         [HttpPost]
         public IActionResult CreateUser([FromBody] UserCreateDto userDto)
         {
+            var role = _context.Roles.SingleOrDefault(r => r.Name == userDto.Role);
+            if (role == null)
+            {
+                return BadRequest("Invalid role");
+            }     
+
             var user = new Users
             {
                 Username = userDto.Username,
-                PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password)
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(userDto.Password),
+                RoleId = role.Id
             };
 
             _context.Users.Add(user);
@@ -72,5 +80,21 @@ namespace BankManagement.Controllers
             _context.SaveChanges();
             return NoContent();
         }
+
+
+        [HttpGet("admin")]
+        [Authorize(Policy = "AdminOnly")]
+        public IActionResult GetAdminData()
+        {
+            return Ok("This is admin-only data.");
+        }
+
+        [HttpGet("user")]
+        [Authorize(Policy = "UserOnly")]
+        public IActionResult GetUserData()
+        {
+            return Ok("This is user-only data.");
+        }
+
     }
 }

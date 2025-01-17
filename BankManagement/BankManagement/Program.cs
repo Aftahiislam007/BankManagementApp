@@ -3,25 +3,50 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.DependencyInjection;
+using Quartz;
+using Quartz.Spi;
+using BankManagement.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme. Example: 'Bearer {token}'",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Bearer" }
+            },
+            new string[] {}
+        }
+    });
+});
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-var key = Encoding.ASCII.GetBytes("YourSecretKeyHere"); // Replace with a secure key
+var key = Encoding.UTF8.GetBytes("MySecureJwtKey"); // Replace with a secure key
 
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(options =>
     {
         options.TokenValidationParameters = new TokenValidationParameters
@@ -32,6 +57,29 @@ builder.Services.AddAuthentication(options =>
             ValidateAudience = false
         };
     });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminOnly", policy => policy.RequireRole("Admin"));
+    options.AddPolicy("UserOnly", policy => policy.RequireRole("User"));
+});
+
+builder.Services.AddControllers();
+
+builder.Services.AddQuartz(q =>
+{
+    /*q.UseMicrosoftDependencyInjectionScopedJobFactory();*/
+
+    var jobKey = new JobKey("InterestCalculationJob");
+    q.AddJob<InterestCalculationJob>(opts => opts.WithIdentity(jobKey));
+    q.AddTrigger(opts => opts
+        .ForJob(jobKey)
+        .WithIdentity("InterestCalculationTrigger")
+        .WithCronSchedule("0 0 1 * * ?"));
+});
+
+builder.Services.AddQuartzHostedService(q => q.WaitForJobsToComplete = true);
+
 
 var app = builder.Build();
 
@@ -44,8 +92,23 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    if (!context.Roles.Any())
+    {
+        context.Roles.AddRange(
+            new Role { Name = "Admin" },
+            new Role { Name = "User" }
+        );
+        context.SaveChanges();
+    }
+}
 
 app.Run();

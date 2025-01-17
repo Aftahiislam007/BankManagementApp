@@ -9,7 +9,7 @@
 The Bank Management System App is a RESTful web service built using ASP.NET Core 8.0. It provides user authentication and management with role-based access control. The API is designed to support scalable, secure, and efficient web applications.
 
 ### 1.2 Technologies Used
-- **Framework**: ASP.NET Core 8.0
+- **Framework**: ASP.NET Core 8.0, ASP.NET Web API
 - **Database**: Microsoft SQL Server
 - **ORM**: Entity Framework Core
 - **Authentication**: JWT

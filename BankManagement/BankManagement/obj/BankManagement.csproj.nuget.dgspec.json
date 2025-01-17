@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitHub Projects\\BankManagementApp\\BankManagement\\BankManagement\\BankManagement.csproj": {}
+    "E:\\ASP.NET Practices\\BankManagementApp\\BankManagement\\BankManagement\\BankManagement.csproj": {}
   },
   "projects": {
-    "D:\\GitHub Projects\\BankManagementApp\\BankManagement\\BankManagement\\BankManagement.csproj": {
+    "E:\\ASP.NET Practices\\BankManagementApp\\BankManagement\\BankManagement\\BankManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitHub Projects\\BankManagementApp\\BankManagement\\BankManagement\\BankManagement.csproj",
+        "projectUniqueName": "E:\\ASP.NET Practices\\BankManagementApp\\BankManagement\\BankManagement\\BankManagement.csproj",
         "projectName": "BankManagement",
-        "projectPath": "D:\\GitHub Projects\\BankManagementApp\\BankManagement\\BankManagement\\BankManagement.csproj",
-        "packagesPath": "C:\\Users\\aftah\\.nuget\\packages\\",
-        "outputPath": "D:\\GitHub Projects\\BankManagementApp\\BankManagement\\BankManagement\\obj\\",
+        "projectPath": "E:\\ASP.NET Practices\\BankManagementApp\\BankManagement\\BankManagement\\BankManagement.csproj",
+        "packagesPath": "C:\\Users\\Aftahi Islam\\.nuget\\packages\\",
+        "outputPath": "E:\\ASP.NET Practices\\BankManagementApp\\BankManagement\\BankManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aftah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Aftahi Islam\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,12 +39,21 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "BCrypt.Net-Core": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.12, )"
@@ -62,6 +71,30 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Quartz": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
+            "Quartz.AspNetCore": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
+            "Quartz.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
+            "Quartz.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[3.13.1, )"
+            },
+            "Quartz.Jobs": {
+              "target": "Package",
+              "version": "[3.13.1, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -91,7 +124,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
