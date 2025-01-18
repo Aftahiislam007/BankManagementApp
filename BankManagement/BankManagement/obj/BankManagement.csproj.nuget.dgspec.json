@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[8.0.12, )"
             },
+            "Microsoft.Azure.Management.Compute.Fluent": {
+              "target": "Package",
+              "version": "[1.38.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[9.0.1, )"

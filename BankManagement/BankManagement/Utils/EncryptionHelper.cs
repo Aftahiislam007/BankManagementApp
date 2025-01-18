@@ -10,11 +10,11 @@ namespace BankManagement.Utils
 
         public static string Encrypt(string plainText)
         {
-            var aesKey = GetValidKey(Key);
+            /*var aesKey = GetValidKey(Key);*/
             using var aes = Aes.Create();
 
-            /*aes.Key = Encoding.UTF8.GetBytes(Key);*/
-            aes.Key = aesKey;
+            aes.Key = Encoding.UTF8.GetBytes(Key);
+            /*aes.Key = aesKey;*/
 
             aes.IV = new byte[16];
 
@@ -27,11 +27,11 @@ namespace BankManagement.Utils
 
         public static string Decrypt(string cipherText)
         {
-            var aesKey = GetValidKey(Key);
+            /*var aesKey = GetValidKey(Key);*/
             using var aes = Aes.Create();
 
-            /*aes.Key = Encoding.UTF8.GetBytes(Key);*/
-            aes.Key = aesKey;
+            aes.Key = Encoding.UTF8.GetBytes(Key);
+            /*aes.Key = aesKey;*/
 
             aes.IV = new byte[16];
 

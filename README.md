@@ -13,8 +13,7 @@ The Bank Management System App is a RESTful web service built using ASP.NET Core
 - **Database**: Microsoft SQL Server
 - **ORM**: Entity Framework Core
 - **Authentication**: JWT
-- **Hosting**: Amazon EC2
-- **Unit Testing**: xUnit, Moq
+- **Unit Testing**: Cypress
 
 
 ### 1.3 Generate JWT Secret Key
@@ -50,45 +49,4 @@ The Encryption key is created using the C# code. 
 ### 3.1 Test Coverage
 The following functionalities have been unit tested:
 1. User login with valid and invalid credentials.
-2. CRUD operations for user management.
-3. Role-based access to secured endpoints.
 
-### 3.2 Test Results
-```
-Test Run Successful.
-Total tests: 12
-Passed: 12
-Failed: 0
-Skipped: 0
-```
-
----
-
-## 4. Deployment Instructions
-
-### 4.1 Amazon EC2 Deployment
-1. **Prepare EC2 Instance**:
-   - Launch an Amazon Linux 2 or Ubuntu 22.04 instance.
-   - Install .NET Runtime and Nginx.
-2. **Transfer Files**:
-   - Use SCP to upload the published project files to `/var/www/myproject`.
-3. **Run the Application**:
-   - Start the app with `dotnet MyProject.dll` or configure it as a systemd service.
-
-### 4.2 CI/CD Setup
-- **Pipeline**: AWS CodePipeline with CodeBuild for CI.
-- **Deploy Artifacts**: Stored in S3, automatically deployed to EC2.
-
----
-
-## 5. Monitoring and Scaling
-
-### 5.1 Monitoring
-- **Metrics**: CPU, memory, and disk usage monitored via CloudWatch.
-- **Logging**: Application logs sent to CloudWatch Logs for centralized monitoring.
-
-### 5.2 Scaling
-- **Auto Scaling**: Configured for horizontal scaling.
-- **Elastic Load Balancer**: Distributes traffic across multiple instances.
-
----
