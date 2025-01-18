@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptionKeyGenerator", "EncryptionKeyGenerator\EncryptionKeyGenerator.csproj", "{07E044B0-1B66-449E-A285-E1BA85B5EDC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07E044B0-1B66-449E-A285-E1BA85B5EDC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07E044B0-1B66-449E-A285-E1BA85B5EDC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07E044B0-1B66-449E-A285-E1BA85B5EDC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07E044B0-1B66-449E-A285-E1BA85B5EDC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9D8BB78E-840D-4EF5-B9A1-C4737DCE52AE}
+	EndGlobalSection
+EndGlobal

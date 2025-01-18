@@ -1,0 +1,15 @@
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\bin\Debug\net8.0\EncryptionKeyGenerator.exe
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\bin\Debug\net8.0\EncryptionKeyGenerator.deps.json
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\bin\Debug\net8.0\EncryptionKeyGenerator.runtimeconfig.json
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\bin\Debug\net8.0\EncryptionKeyGenerator.dll
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\bin\Debug\net8.0\EncryptionKeyGenerator.pdb
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\EncryptionKeyGenerator.GeneratedMSBuildEditorConfig.editorconfig
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\EncryptionKeyGenerator.AssemblyInfoInputs.cache
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\EncryptionKeyGenerator.AssemblyInfo.cs
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\EncryptionKeyGenerator.csproj.CoreCompileInputs.cache
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\EncryptionKeyGenerator.sourcelink.json
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\EncryptionKeyGenerator.dll
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\refint\EncryptionKeyGenerator.dll
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\EncryptionKeyGenerator.pdb
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\EncryptionKeyGenerator.genruntimeconfig.cache
+E:\ASP.NET Practices\BankManagementApp\EncryptionKeyGenerator\EncryptionKeyGenerator\obj\Debug\net8.0\ref\EncryptionKeyGenerator.dll

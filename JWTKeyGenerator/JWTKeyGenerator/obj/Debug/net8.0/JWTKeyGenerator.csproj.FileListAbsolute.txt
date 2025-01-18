@@ -1,0 +1,15 @@
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\bin\Debug\net8.0\JWTKeyGenerator.exe
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\bin\Debug\net8.0\JWTKeyGenerator.deps.json
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\bin\Debug\net8.0\JWTKeyGenerator.runtimeconfig.json
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\bin\Debug\net8.0\JWTKeyGenerator.dll
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\bin\Debug\net8.0\JWTKeyGenerator.pdb
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\JWTKeyGenerator.GeneratedMSBuildEditorConfig.editorconfig
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\JWTKeyGenerator.AssemblyInfoInputs.cache
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\JWTKeyGenerator.AssemblyInfo.cs
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\JWTKeyGenerator.csproj.CoreCompileInputs.cache
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\JWTKeyGenerator.sourcelink.json
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\JWTKeyGenerator.dll
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\refint\JWTKeyGenerator.dll
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\JWTKeyGenerator.pdb
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\JWTKeyGenerator.genruntimeconfig.cache
+E:\ASP.NET Practices\BankManagementApp\JWTKeyGenerator\JWTKeyGenerator\obj\Debug\net8.0\ref\JWTKeyGenerator.dll

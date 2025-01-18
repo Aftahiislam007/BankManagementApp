@@ -16,6 +16,15 @@ The Bank Management System App is a RESTful web service built using ASP.NET Core
 - **Hosting**: Amazon EC2
 - **Unit Testing**: xUnit, Moq
 
+
+### 1.3 Generate JWT Secret Key
+
+The JWT secret key is created using the C# code. 
+
+### 1.4 Generate Encryption Key
+
+The Encryption key is created using the C# code. 
+
 ---
 
 ## 2. API Endpoints

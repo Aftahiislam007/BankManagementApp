@@ -5,12 +5,17 @@ namespace BankManagement.Utils
 {
     public static class EncryptionHelper
     {
-        private static readonly string Key = "MyEncryptionKey123";
+        private static readonly string Key = Environment.GetEnvironmentVariable("EncryptionKey")
+            ?? throw new InvalidOperationException("Encryption key is not configured.");
 
         public static string Encrypt(string plainText)
         {
+            var aesKey = GetValidKey(Key);
             using var aes = Aes.Create();
-            aes.Key = Encoding.UTF8.GetBytes(Key);
+
+            /*aes.Key = Encoding.UTF8.GetBytes(Key);*/
+            aes.Key = aesKey;
+
             aes.IV = new byte[16];
 
             using var encryptor = aes.CreateEncryptor();
@@ -22,8 +27,12 @@ namespace BankManagement.Utils
 
         public static string Decrypt(string cipherText)
         {
+            var aesKey = GetValidKey(Key);
             using var aes = Aes.Create();
-            aes.Key = Encoding.UTF8.GetBytes(Key);
+
+            /*aes.Key = Encoding.UTF8.GetBytes(Key);*/
+            aes.Key = aesKey;
+
             aes.IV = new byte[16];
 
             using var decryptor = aes.CreateDecryptor();
@@ -31,6 +40,20 @@ namespace BankManagement.Utils
             var decryptedBytes = decryptor.TransformFinalBlock(cipherBytes, 0, cipherBytes.Length);
 
             return Encoding.UTF8.GetString(decryptedBytes);
+        }
+
+        private static byte[] GetValidKey(string key)
+        {
+            var keyBytes = Encoding.UTF8.GetBytes(key);
+            if (keyBytes.Length < 32)
+            {
+                Array.Resize(ref keyBytes, 32);
+            }
+            else if (keyBytes.Length > 32)
+            {
+                keyBytes = keyBytes.Take(32).ToArray();
+            }
+            return keyBytes;
         }
     }
 }
